@@ -1,0 +1,14 @@
+.container{
+  width:40rem;
+  height:20rem;
+  background: var(--gray-600);
+  border-radius: 8px;
+  box-shadow: 0 -10px 10px -10px var(--gray-300);
+  color: var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:0.5rem;
+}
+

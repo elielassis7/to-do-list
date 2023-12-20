@@ -1,0 +1,14 @@
+
+.text{
+  color:var(--blue);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: .5rem;
+}
+
+.counter{
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius:8px;
+  width:20px;
+}

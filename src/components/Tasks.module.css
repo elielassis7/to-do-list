@@ -1,0 +1,40 @@
+
+.taskContainer{
+  width: 40rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius:8px;
+  margin-top: 1.5rem;
+}
+
+.check{
+  color: var(--blue);
+  width: 1.5rem;
+  margin: 1rem;
+  border-radius: 50%;
+}
+
+.text{
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  height: 2rem;
+  margin: auto;
+}
+
+.textChecked{
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  height: 2rem;
+  margin: auto;
+  text-decoration: line-through
+}
+
+.trash{
+  cursor: pointer;
+  color: var(--gray-300);
+  margin: 1rem;
+}
