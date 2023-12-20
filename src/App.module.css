@@ -17,6 +17,8 @@
   flex-direction: column;
   justify-content: center;
   align-items:center;
+  background: var(--gray-600);
+  padding-bottom: 50px;
 }
 
 .bar{
@@ -55,4 +57,5 @@
   font-weight: 700;
   gap: .3rem;
   cursor: pointer;
+  padding: 10px;
 }
