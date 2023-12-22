@@ -48,10 +48,13 @@ export function App() {
 
   const tasksNoVoid = tasks.filter(item => item !== '').length;
 
-  function deleteTask(deleteTasks: string){
+  function deleteTask(deleteTasks: string, checked: boolean){
     const taskForDelete = tasks.filter(task => {return task != deleteTasks})
     setTasks(taskForDelete)
-    setCheck(check - 1)
+    if(checked){
+      setCheck(check - 1)
+    }
+    
   }
 
   return (
@@ -84,14 +87,11 @@ export function App() {
           <TasksCompleted numberCreated={tasksNoVoid} numberCheck={check}/>
         </div>
         <div>
-          {tasks.length > 1 ?  tasks.filter(item => item !== '').map(item => (
+          {tasks.length >= 1 ?  tasks.filter(item => item !== '').map(item => (
               <Tasks key={item} description={item} onCheckChange={handleCheckChange} onDelete={deleteTask}/>
           )) : <EmptyTask/>}
         
-        {/* <EmptyTask/>
-        {tasks.map(item => (
-             <Tasks key={item.description} description={item.description} checked={item.checked}/>
-        ))} */}
+       
         </div>
         
        

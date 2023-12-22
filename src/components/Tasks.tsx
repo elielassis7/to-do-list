@@ -5,7 +5,7 @@ import { useState, ChangeEvent } from "react";
 interface TaskProps{
   description:string;
   onCheckChange: (value: boolean) => void;
-  onDelete: (description: string) => void
+  onDelete: (description: string, check: boolean) => void
 }
 
 
@@ -21,8 +21,8 @@ export function Tasks({description, onCheckChange, onDelete}:TaskProps){
     onCheckChange(event.target.checked)
   }
 
-  function handleDeleteTask(){
-    onDelete(description)
+  function handleDeleteTask(description: string, check: boolean){
+    onDelete(description, check)
   }
 
   return(
@@ -30,7 +30,7 @@ export function Tasks({description, onCheckChange, onDelete}:TaskProps){
           <input type="checkBox" name="" checked={check} onChange={handleChecked} className={styles.check}/>
           {check ? <span className={styles.textChecked}>{description }</span> : <span className={styles.text}>{description }</span> }
           
-          <Trash size={24} className={styles.trash} onClick={handleDeleteTask}/>
+          <Trash size={24} className={styles.trash} onClick={()=>handleDeleteTask(description, check)}/>
         </div>
     
   )}
